@@ -6,64 +6,64 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0002_user_delete_account'),
+        ("accounts", "0002_user_delete_account"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='user',
-            name='address',
+            model_name="user",
+            name="address",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='certificate',
+            model_name="user",
+            name="certificate",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='field_of_study',
+            model_name="user",
+            name="field_of_study",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='gender',
+            model_name="user",
+            name="gender",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='img_user',
+            model_name="user",
+            name="img_user",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='job',
+            model_name="user",
+            name="job",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='last_name',
+            model_name="user",
+            name="last_name",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='marital_status',
+            model_name="user",
+            name="marital_status",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='mobile',
+            model_name="user",
+            name="mobile",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='national_id',
+            model_name="user",
+            name="national_id",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='physical_condition',
+            model_name="user",
+            name="physical_condition",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='telephone',
+            model_name="user",
+            name="telephone",
         ),
         migrations.RemoveField(
-            model_name='user',
-            name='username',
+            model_name="user",
+            name="username",
         ),
         migrations.AlterModelTable(
-            name='user',
-            table='account',
+            name="user",
+            table="accounts",
         ),
     ]

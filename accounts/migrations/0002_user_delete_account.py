@@ -6,40 +6,132 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0001_initial'),
+        ("accounts", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='User',
+            name="User",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('username', models.CharField(max_length=20, unique=True, verbose_name='نام کاربری')),
-                ('name', models.CharField(max_length=100, verbose_name='نام')),
-                ('last_name', models.CharField(max_length=100, verbose_name='نام خانوادگی')),
-                ('gender', models.BooleanField(choices=[(True, 'مرد'), (False, 'زن')], verbose_name='جنسیت')),
-                ('marital_status', models.BooleanField(choices=[(True, 'متاهل'), (False, 'مجرد')], verbose_name='وضعیت تاهل')),
-                ('telephone', models.CharField(blank=True, max_length=20, null=True, verbose_name='تلفن ثابت')),
-                ('mobile', models.CharField(max_length=20, verbose_name='تلفن همراه')),
-                ('address', models.TextField(verbose_name='آدرس')),
-                ('certificate', models.CharField(choices=[('diploma', 'دیپلم'), ('associate', 'کاردانی'), ('bachelor', 'کارشناسی'), ('master', 'کارشناسی ارشد'), ('phd', 'دکترا')], max_length=20, verbose_name='مدرک تحصیلی')),
-                ('field_of_study', models.CharField(choices=[('it', 'فناوری اطلاعات'), ('engineering', 'مهندسی'), ('medicine', 'پزشکی'), ('other', 'سایر')], max_length=50, verbose_name='رشته تحصیلی')),
-                ('physical_condition', models.CharField(choices=[('normal', 'سالم'), ('disabled', 'دارای معلولیت')], max_length=20, verbose_name='وضعیت جسمانی')),
-                ('job', models.CharField(choices=[('student', 'دانشجو'), ('teacher', 'معلم'), ('engineer', 'مهندس'), ('other', 'سایر')], max_length=20, verbose_name='شغل')),
-                ('img_user', models.ImageField(blank=True, null=True, upload_to='images/', verbose_name='تصویر کاربر')),
-                ('national_id', models.CharField(blank=True, max_length=20, null=True, verbose_name='کد ملی')),
-                ('email', models.EmailField(max_length=254, verbose_name='ایمیل')),
-                ('password', models.CharField(max_length=100, verbose_name='رمز عبور')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "username",
+                    models.CharField(
+                        max_length=20, unique=True, verbose_name="نام کاربری"
+                    ),
+                ),
+                ("name", models.CharField(max_length=100, verbose_name="نام")),
+                (
+                    "last_name",
+                    models.CharField(max_length=100, verbose_name="نام خانوادگی"),
+                ),
+                (
+                    "gender",
+                    models.BooleanField(
+                        choices=[(True, "مرد"), (False, "زن")], verbose_name="جنسیت"
+                    ),
+                ),
+                (
+                    "marital_status",
+                    models.BooleanField(
+                        choices=[(True, "متاهل"), (False, "مجرد")],
+                        verbose_name="وضعیت تاهل",
+                    ),
+                ),
+                (
+                    "telephone",
+                    models.CharField(
+                        blank=True, max_length=20, null=True, verbose_name="تلفن ثابت"
+                    ),
+                ),
+                ("mobile", models.CharField(max_length=20, verbose_name="تلفن همراه")),
+                ("address", models.TextField(verbose_name="آدرس")),
+                (
+                    "certificate",
+                    models.CharField(
+                        choices=[
+                            ("diploma", "دیپلم"),
+                            ("associate", "کاردانی"),
+                            ("bachelor", "کارشناسی"),
+                            ("master", "کارشناسی ارشد"),
+                            ("phd", "دکترا"),
+                        ],
+                        max_length=20,
+                        verbose_name="مدرک تحصیلی",
+                    ),
+                ),
+                (
+                    "field_of_study",
+                    models.CharField(
+                        choices=[
+                            ("it", "فناوری اطلاعات"),
+                            ("engineering", "مهندسی"),
+                            ("medicine", "پزشکی"),
+                            ("other", "سایر"),
+                        ],
+                        max_length=50,
+                        verbose_name="رشته تحصیلی",
+                    ),
+                ),
+                (
+                    "physical_condition",
+                    models.CharField(
+                        choices=[("normal", "سالم"), ("disabled", "دارای معلولیت")],
+                        max_length=20,
+                        verbose_name="وضعیت جسمانی",
+                    ),
+                ),
+                (
+                    "job",
+                    models.CharField(
+                        choices=[
+                            ("student", "دانشجو"),
+                            ("teacher", "معلم"),
+                            ("engineer", "مهندس"),
+                            ("other", "سایر"),
+                        ],
+                        max_length=20,
+                        verbose_name="شغل",
+                    ),
+                ),
+                (
+                    "img_user",
+                    models.ImageField(
+                        blank=True,
+                        null=True,
+                        upload_to="images/",
+                        verbose_name="تصویر کاربر",
+                    ),
+                ),
+                (
+                    "national_id",
+                    models.CharField(
+                        blank=True, max_length=20, null=True, verbose_name="کد ملی"
+                    ),
+                ),
+                ("email", models.EmailField(max_length=254, verbose_name="ایمیل")),
+                ("password", models.CharField(max_length=100, verbose_name="رمز عبور")),
+                (
+                    "created_at",
+                    models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد"),
+                ),
             ],
             options={
-                'verbose_name': 'حساب کاربری',
-                'verbose_name_plural': 'حساب\u200cهای کاربری',
-                'db_table': 'Users',
-                'ordering': ['name'],
+                "verbose_name": "حساب کاربری",
+                "verbose_name_plural": "حساب\u200cهای کاربری",
+                "db_table": "Users",
+                "ordering": ["name"],
             },
         ),
         migrations.DeleteModel(
-            name='Account',
+            name="Account",
         ),
     ]
