@@ -1,0 +1,24 @@
+# محیط مجازی
+.venv/
+venv/
+ENV/
+env/
+
+# فایل‌های پایگاه داده
+*.sqlite3
+*.sql
+
+# فایل‌های موقت PyCharm / IDE
+.idea/
+*.iml
+
+# فایل‌های کامپایل شده Python
+__pycache__/
+*.py[cod]
+
+# فایل‌های لاگ
+*.log
+
+# پوشه‌های موقت
+*.tmp
+*.bak

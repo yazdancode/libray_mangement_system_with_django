@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه اصلی - سیستم مدیریت کتابخانه خونه</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>سیستم مدیریت کتابخانه خونه</h1>
+        <p>به داشبورد خود خوش آمدید</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#home">خانه</a>
+        <a href="#book-management">مدیریت کتاب‌ها</a>
+        <a href="#member-management">مدیریت اعضا</a>
+        <a href="#borrow-return">امانت و بازگشت</a>
+        <a href="#reports">گزارشات</a>
+        <a href="#settings">تنظیمات</a>
+        <a href="">ثبت نام</a>
+        <a href="">ورود</a>
+        <a href="">خروج</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">خلاصه وضعیت کتابخانه</h2>
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>تعداد کل کتاب‌ها</h3>
+                <p>1250</p>
+            </div>
+            <div class="card">
+                <h3>کتاب‌های موجود</h3>
+                <p>875</p>
+            </div>
+            <div class="card">
+                <h3>کتاب‌های امانت داده شده</h3>
+                <p>375</p>
+            </div>
+            <div class="card">
+                <h3>تعداد کل اعضا</h3>
+                <p>450</p>
+            </div>
+            <div class="card">
+                <h3>اعضای فعال</h3>
+                <p>380</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">دسترسی‌های سریع</h2>
+        <div class="quick-actions">
+            <a href="#" class="quick-action-btn">ثبت کتاب جدید</a>
+            <a href="#" class="quick-action-btn">ثبت عضو جدید</a>
+            <a href="#" class="quick-action-btn">امانت دادن کتاب</a>
+            <a href="#" class="quick-action-btn">بازگشت کتاب</a>
+            <a href="#" class="quick-action-btn">جستجوی کتاب</a>
+            <a href="#" class="quick-action-btn">جستجوی عضو</a>
+        </div>
+
+        <h2 class="section-title">آخرین فعالیت‌ها</h2>
+        <div class="latest-activity">
+            <ul>
+                <li><span>کتاب "شاهنامه" به "علی احمدی" امانت داده شد.</span> <span>1402/10/25</span></li>
+                <li><span>کتاب "حافظ" توسط "فاطمه کریمی" بازگردانده شد.</span> <span>1402/10/24</span></li>
+                <li><span>عضو جدید: "محسن رضایی" ثبت شد.</span> <span>1402/10/24</span></li>
+                <li><span>کتاب "گلستان سعدی" به موجودی اضافه شد.</span> <span>1402/10/23</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 1402 سیستم مدیریت کتابخانه خونه. تمامی حقوق محفوظ است.</p>
+    </div>
+
+</body>
+</html>
