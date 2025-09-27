@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Account(models.Model):
+class User(models.Model):
     name = models.CharField(max_length=100, verbose_name="نام")
     email = models.EmailField(verbose_name="ایمیل")
     password = models.CharField(max_length=100, verbose_name="رمز عبور")
