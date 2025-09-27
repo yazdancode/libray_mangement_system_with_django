@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block title %}پروفایل کاربر{% endblock %}
+
+{% block content %}
+<h2>پروفایل کاربر</h2>
+<p><strong>نام کاربری:</strong> {{ user.username }}</p>
+<p><strong>ایمیل:</strong> {{ user.email }}</p>
+
+<a href="{% url 'accounts:logout' %}" class="btn btn-warning">
+    خروج
+</a>
+{% endblock %}

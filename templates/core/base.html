@@ -37,19 +37,18 @@
         <a href="#">
             <i class="mdi mdi-cog-outline"></i> تنظیمات
         </a>
-
-        <!-- لینک های ثابت -->
         <a href="{% url 'core:about' %}">
             <i class="mdi mdi-information-outline"></i> درباره ما
         </a>
         <a href="{% url 'core:contact' %}">
             <i class="mdi mdi-phone-outline"></i> تماس با ما
         </a>
-
-        <!-- لینک های ورود / خروج -->
         {% if user.is_authenticated %}
             <a href="{% url 'accounts:logout' %}">
                 <i class="mdi mdi-logout-variant"></i> خروج
+            </a>
+            <a href="{% url 'accounts:profile' %}">
+               <i class="mdi mdi-account-circle-outline"></i> پروفایل
             </a>
         {% else %}
             <a href="{% url 'accounts:login' %}">
@@ -60,7 +59,6 @@
             </a>
         {% endif %}
     </div>
-
     <!-- Main Content -->
     <div class="container">
         {% block content %}
