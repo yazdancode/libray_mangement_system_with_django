@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}سیستم مدیریت کتابخانه خونه{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <div class="header">
+        <h1>سیستم مدیریت کتابخانه خونه</h1>
+        <p>به داشبورد خود خوش آمدید</p>
+    </div>
+
+    <div class="navbar">
+        <a href="{% url 'core:home' %}">خانه</a>
+        <a href="#">مدیریت کتاب‌ها</a>
+        <a href="#">مدیریت اعضا</a>
+        <a href="#">امانت و بازگشت</a>
+        <a href="#">گزارشات</a>
+        <a href="#">تنظیمات</a>
+        {% if user.is_authenticated %}
+        <!-- اگر کاربر لاگین کرده -->
+        <a href="{% url 'accounts:logout' %}">
+            <i class="mdi mdi-logout-variant"></i> خروج
+        </a>
+        {% else %}
+        <a href="{% url 'accounts:login' %}">
+            <i class="mdi mdi-account"></i> ورود
+        </a>
+        <a href="{% url 'accounts:register' %}">
+            <i class="mdi mdi-account-plus"></i> ثبت‌نام
+        </a>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

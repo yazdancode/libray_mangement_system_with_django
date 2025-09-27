@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block title %}ثبت‌نام - سیستم مدیریت کتابخانه{% endblock %}
+
+{% block content %}
+<h2>ثبت‌نام کاربر جدید</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success">ثبت‌نام</button>
+</form>
+<p>قبلاً حساب دارید؟ <a href="{% url 'accounts:login' %}">وارد شوید</a></p>
+{% endblock %}
