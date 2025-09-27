@@ -34,3 +34,7 @@ def register_view(request):
         form = RegisterForm()
 
     return render(request, "accounts/register.html", {"form": form})
+
+
+def profile_view(request):
+    pass
