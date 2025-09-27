@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه اصلی - سیستم مدیریت کتابخانه خونه</title>
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
 <body>
 
@@ -21,9 +22,12 @@
         <a href="#borrow-return">امانت و بازگشت</a>
         <a href="#reports">گزارشات</a>
         <a href="#settings">تنظیمات</a>
-        <a href="">ثبت نام</a>
-        <a href="">ورود</a>
-        <a href="">خروج</a>
+        <a href="{% url 'accounts:login' %}">
+            <i class="mdi mdi-account-multiple-plus"></i>
+        </a>
+        <a href="{% url 'accounts:register' %}">
+            <i class="mdi mdi-logout"></i>
+        </a>
     </div>
 
     <div class="container">
